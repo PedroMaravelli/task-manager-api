@@ -1,8 +1,6 @@
-Claro! Aqui está um README.md detalhado, profissional, e muito claro para o seu projeto NestJS de gerenciamento de tarefas com JWT, Prisma e Jest — focado em boas práticas, clareza e cobertura total para avaliação técnica:
 
----
 
-# Task Management API
+# Task Manager API
 
 > API RESTful para gerenciamento de tarefas com autenticação via JWT construída com NestJS, Prisma e PostgreSQL.
 
@@ -18,13 +16,10 @@ Claro! Aqui está um README.md detalhado, profissional, e muito claro para o seu
 * [Configuração](#configuração)
 * [Execução](#execução)
 * [Endpoints](#endpoints)
-
-  * [Autenticação](#autenticação)
-  * [Tarefas](#tarefas)
+* [Autenticação](#autenticação)
 * [Testes](#testes)
 * [Boas práticas e padrões](#boas-práticas-e-padrões)
-* [Licença](#licença)
-* [Contato](#contato)
+
 
 ---
 
@@ -68,31 +63,6 @@ Esta API foi desenvolvida para permitir o cadastro, autenticação e gerenciamen
 * Prisma centralizado com provider próprio para injeção.
 * Uso de Pipes e Decorators para validação e autenticação.
 
-Exemplo simplificado da estrutura:
-
-```
-src/
-├── auth/
-│   ├── auth.controller.ts
-│   ├── auth.service.ts
-│   ├── dto/
-│   ├── jwt.strategy.ts
-│   └── jwt.guard.ts
-├── tasks/
-│   ├── tasks.controller.ts
-│   ├── tasks.service.ts
-│   ├── dto/
-│   └── task.entity.ts
-├── users/
-│   ├── users.service.ts
-│   └── user.entity.ts
-├── prisma/
-│   ├── prisma.service.ts
-│   └── prisma.module.ts
-├── app.module.ts
-└── main.ts
-```
-
 ---
 
 ## Instalação
@@ -106,8 +76,8 @@ src/
 ### Passos
 
 ```bash
-git clone https://github.com/seu-usuario/task-management-api.git
-cd task-management-api
+git clone https://github.com/PedroMaravelli/task-managemr-api.git
+cd task-managemr-api
 npm install
 ```
 
@@ -115,21 +85,13 @@ npm install
 
 ## Configuração
 
-Copie o arquivo `.env.example` e configure as variáveis:
-
-```bash
-cp .env.example .env
-```
-
 Variáveis principais:
 
 ```env
 DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public
 JWT_SECRET=seuSegredoSuperSecreto
-PORT=3000
-```
 
----
+```
 
 ## Execução
 
@@ -183,7 +145,7 @@ npm run start:prod
 ```bash
 npm run test          # Testes unitários
 npm run test:e2e      # Testes end-to-end
-npm run test:cov      # Cobertura de testes
+
 ```
 
 ---
@@ -198,18 +160,4 @@ npm run test:cov      # Cobertura de testes
 * Prisma gerencia esquema e migrações do banco.
 * Uso de variáveis de ambiente para configuração sensível.
 
----
 
-## Licença
-
-MIT © \[Seu Nome]
-
----
-
-## Contato
-
-Para dúvidas ou sugestões, abra uma issue ou envie um e-mail para: [seu.email@example.com](mailto:seu.email@example.com)
-
----
-
-Se precisar posso gerar o README em arquivo `.md` pronto para você usar! Quer que eu faça?
